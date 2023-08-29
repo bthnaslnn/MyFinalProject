@@ -8,14 +8,7 @@ using System.Threading.Tasks;
 
 namespace DataAccess.Abstract
 {
-
-    //interface metotları default olarak publicdir.
-
-    public interface IProductDal :IEntityRepository<Product>
+    public interface IOrderDal: IEntityRepository<Order>
     {
-        
     }
 }
-
-
-//Code Refactoring
