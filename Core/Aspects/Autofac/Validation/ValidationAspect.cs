@@ -10,12 +10,14 @@ using System.Threading.Tasks;
 
 namespace Core.Aspects.Autofac.Validation
 {
-    public class ValidationAspect : MethodInterception
+    public class ValidationAspect : MethodInterception //Aspect --> metot başı sonu çalışacak yapı
     {
         private Type _validatorType;
+
         public ValidationAspect(Type validatorType)
         {
-            if (!typeof(IValidator).IsAssignableFrom(validatorType))
+            //defensive coding 
+            if (!typeof(IValidator).IsAssignableFrom(validatorType)) //gönderömeye çalıştığın validatotype atanaibliyor mu? kullanıcı her şeyi yazabilir
             {
                 throw new System.Exception("Bu bir doğrulama sınıfı değil");
             }

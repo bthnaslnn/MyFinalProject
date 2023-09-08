@@ -1,12 +1,9 @@
 ﻿using Castle.DynamicProxy;
-using Microsoft.EntityFrameworkCore.Diagnostics;
-using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
-using IInterceptor = Castle.DynamicProxy.IInterceptor; //CASTLE ÇÖZÜLMESİ LAZIMDI ÇÖZÜLMEDİ
 
 namespace Core.Utilities.Interceptors
 {
